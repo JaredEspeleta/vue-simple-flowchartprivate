@@ -174,13 +174,13 @@ export default {
         this.$emit('linkBreak', deletedLink);
       }
     },
-    nodeSelected(id, e) {
+    /*nodeSelected(id, e) {
       this.action.dragging = id;
       this.action.selected = id;
       this.$emit('nodeClick', id);
       this.mouse.lastX = e.pageX || e.clientX + document.documentElement.scrollLeft
       this.mouse.lastY = e.pageY || e.clientY + document.documentElement.scrollTop
-    },
+    },*/
     handleMove(e) {
       if (this.action.linking) {
         [this.mouse.x, this.mouse.y] = getMousePosition(this.$el, e);
