@@ -6,8 +6,7 @@
     <svg width="100%" :height="`${height}px`">
       <flowchart-link v-bind.sync="link" 
         v-for="(link, index) in lines" 
-        :key="`link${index}`"
-        @deleteLink="linkDelete(link.id)">
+        :key="`link${index}`">
       </flowchart-link>
     </svg>
     <flowchart-node v-bind.sync="node" 
@@ -15,8 +14,7 @@
       :key="`node${index}`"
       :options="nodeOptions"
       @linkingStart="linkingStart(node.id)"
-      @linkingStop="linkingStop(node.id)"
-      @nodeSelected="nodeSelected(node.id, $event)">
+      @linkingStop="linkingStop(node.id)">
     </flowchart-node>
   </div>
 </template>
